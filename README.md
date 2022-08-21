@@ -1,5 +1,7 @@
 # sway-test-rs
 
+**NOTE: This is currently a WIP and is not yet functioning.**
+
 A cargo-generate template that makes it easy to create integration tests for
 Rust + Sway projects.
 
