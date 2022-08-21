@@ -14,6 +14,8 @@ With [Rust installed][rust-installation]:
    ```
    cargo install cargo-generate
    ```
+   You can learn more about cargo generate by visiting [its
+   repository][cargo-generate-repo].
 
 2. Generate your integration tests.
    ```
@@ -24,3 +26,4 @@ With [Rust installed][rust-installation]:
    integration testing crate.
 
 [rust-installation]: https://www.rust-lang.org/tools/install
+[cargo-generate-repo]: https://github.com/cargo-generate/cargo-generate
