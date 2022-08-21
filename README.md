@@ -1,4 +1,4 @@
-# sway-test-rs
+# Rust + Sway integration testing
 
 **NOTE: This is currently a WIP and is not yet functioning.**
 
