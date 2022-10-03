@@ -1,9 +1,7 @@
 # Rust + Sway integration testing
 
-**NOTE: This is currently a WIP and is not yet functioning.**
-
-A cargo-generate template that makes it easy to initialise a Sway project ready
-for Rust integration testing.
+A cargo-generate template that makes it easy to initialise Rust integration
+testing within an existing Sway project.
 
 This template is designed for Rust developers who wish to test integration of
 their Rust application and Sway code.
@@ -19,13 +17,35 @@ With [Rust installed][rust-installation]:
    You can learn more about cargo generate by visiting [its
    repository][cargo-generate-repo].
 
-2. Generate your integration tests.
+2. Change into the directory of your existing `forc` project.
    ```
-   cargo generate https://github.com/fuellabs/sway-test-rs
+   cd /path/to/my/forc/project
    ```
-   The cargo generate command will prompt you for a project name along with some
-   other details before initialising a new repository containing your generated
-   integration testing crate.
+   Make sure you have run `forc build` within your project at least once so that
+   the output artifacts are available to the integration tests. *Note: This may
+   no longer be required in the future as we hope to enable the integration
+   testing to automatically build the artifacts as necessary so that they are
+   always up to date!*
+
+3. Generate your integration tests.
+   ```
+   cargo generate --init https://github.com/fuellabs/sway-test-rs
+   ```
+   The cargo generate command will prompt you for your project's name. Make sure
+   the name matches your existing `forc` project name!
+
+4. Done! Your test harness should be generated. You can run it as you would
+   normal Rust tests:
+   ```
+   cargo test
+   ```
+   If all went well the initial test harness should build and run successfully!
+
+## Useful Links:
+
+- The Sway & Forc repository: https://github.com/fuellabs/sway
+- The Fuel Rust SDK repository: https://github.com/fuellabs/fuels-rs
+- The Fuel Rust SDK Book: https://fuellabs.github.io/fuels-rs/latest
 
 [rust-installation]: https://www.rust-lang.org/tools/install
 [cargo-generate-repo]: https://github.com/cargo-generate/cargo-generate
